@@ -25,7 +25,7 @@ locals {
     }
   })
 
-  settings = default(var.settings, {
+  settings = defaults(var.settings, {
     kubernetes = {
       image_pull_policy         = "Always"
       read_only_root_filesystem = true
