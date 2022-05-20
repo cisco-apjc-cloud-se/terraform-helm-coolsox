@@ -127,9 +127,9 @@ appd:
     APPD_CONTROLLER_ACCESS_KEY: "${local.appd.account.key}"
 
 kubernetes:
-    repository: ${local.kubernetes.repository}
-    imagePullPolicy: ${local.kubernetes.image_pull_policy}
-    readOnlyRootFilesystem: ${local.kubernetes.read_only_root_filesystem}
+    repository: ${local.settings.kubernetes.repository}
+    imagePullPolicy: ${local.settings.kubernetes.image_pull_policy}
+    readOnlyRootFilesystem: ${local.settings.kubernetes.read_only_root_filesystem}
 java:
     options: -Xms64m -Xmx128m -XX:PermSize=32m -XX:MaxPermSize=64m -XX:+UseG1GC -Djava.security.egd=file:/dev/urandom
 
