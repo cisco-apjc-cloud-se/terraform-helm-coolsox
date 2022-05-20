@@ -65,7 +65,6 @@ locals {
     }
     queue = {
       version = "latest"
-      replicas = 1
     }
     shipping = {
       version = "latest"
