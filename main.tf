@@ -13,7 +13,7 @@ terraform {
 locals {
   appd = defaults(var.appd, {
     account = {
-      host = format("%s.saas.appdynamics.com", var.appd.account.name)
+      # host = format("%s.saas.appdynamics.com", var.appd.account.name)
       port = 443
       use_ssl = true
     }

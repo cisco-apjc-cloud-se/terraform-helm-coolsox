@@ -107,7 +107,7 @@ variable "appd" {
       name = string
       })
     account = object({
-      host           = optional(string)
+      host           = string
       port           = optional(number)
       use_ssl        = optional(bool)
       name           = string
