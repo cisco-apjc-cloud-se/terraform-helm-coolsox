@@ -36,7 +36,6 @@ locals {
     }
     catalogue_db = {
       version = "latest"
-      replicas = 1
     }
     catalogue = {
       version = "latest"
@@ -74,7 +73,6 @@ locals {
     }
     user_db = {
       version = "latest"
-      replicas = 1
     }
     user = {
       version = "latest"
