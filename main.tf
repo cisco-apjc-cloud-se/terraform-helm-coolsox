@@ -202,8 +202,8 @@ appdynamics_db_agent:
     account_access_key: ${local.appd.account.key}
     dbagent_name: ${local.appd.db_agent.name}
     dbagent_version: ${local.appd.db_agent.version}
-    mongodb_user: ${local.appd.db_agent.databases["mongodb"].user}
-    mongodb_password: ${local.appd.db_agent.databases["mongodb"].password}
+    mongodb_user: ${try(local.appd.db_agent.databases["mongodb"].user, "")}
+    mongodb_password: ${try(local.appd.db_agent.databases["mongodb"].password, "")}
 
 EOF
   ]
