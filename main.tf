@@ -119,7 +119,7 @@ resource "helm_release" "coolsox" {
   values = [<<EOF
 
 appd:
-    APPD_APPNAME: "${local.appd.appplication.name}"
+    APPD_APPNAME: "${local.appd.application.name}"
     APPD_CONTROLLER_HOST: "${local.appd.account.host}"
     APPD_CONTROLLER_PORT: "${local.appd.account.port}"
     APPD_CONTROLLER_USE_SSL: "${local.appd.account.use_ssl}"
