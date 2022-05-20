@@ -121,11 +121,11 @@ variable "appd" {
       enabled     = bool
       name        = optional(string)
       version     = optional(string)
-      databases   = map(object({
+      databases   = optional(map(object({
         name      = string
         user      = string
         password  = string
-        }))
+        })))
       })
   })
 }
