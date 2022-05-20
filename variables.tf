@@ -19,9 +19,11 @@ variable "panoptica_enabled" {
 ### Helm Variables ###
 variable "helm" {
   type = object({
-    namespace   = string
-    repository  = string
-    chart       = string
+    release_name = string
+    namespace    = string
+    repository   = string
+    chart        = string
+    version      = string
     })
 }
 

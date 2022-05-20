@@ -113,10 +113,11 @@ resource "kubernetes_namespace" "coolsox" {
 
 resource "helm_release" "coolsox" {
 
-  name = "appd-metrics-server"
+  name        = var.helm.release_name
   namespace   = kubernetes_namespace.coolsox.metadata[0].name
-  repository  = var.helm_repository
-  chart       = var.helm_chart
+  repository  = var.helm.repository
+  chart       = var.helm.chart
+  version     = var.helm.version
 
   values = [<<EOF
 
