@@ -61,6 +61,7 @@ variable "settings" {
       # AppD_adrumLocation: cdn.appdynamics.com\/adrum\/adrum-21.4.0.3405.js
       ingress = object({
         enabled = optional(bool)
+        url = optional(string)
         })
       loadbalancer = object({
         enabled = optional(bool)

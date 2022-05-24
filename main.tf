@@ -160,6 +160,7 @@ frontend:
     # Controls the deployment of kubernets ingress controller for front-end
     ingress:
         enabled: ${local.settings.frontend.ingress.enabled}
+        url: ${local.settings.frontend.ingress.url}
 
     # Controls the deployment of kubernetes loadbalancer for front-end
     loadbalancer:
