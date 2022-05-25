@@ -25,6 +25,7 @@ variable "helm" {
     chart        = string
     version      = string
     wait         = bool
+    timeout      = number 
     })
 }
 

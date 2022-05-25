@@ -117,7 +117,7 @@ resource "helm_release" "coolsox" {
   chart       = var.helm.chart
   version     = var.helm.version
   wait        = var.helm.wait
-  timeout     = 900
+  timeout     = var.helm.timeout
 
   values = [<<EOF
 
