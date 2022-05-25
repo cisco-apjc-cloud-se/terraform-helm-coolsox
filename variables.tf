@@ -24,6 +24,7 @@ variable "helm" {
     repository   = string
     chart        = string
     version      = string
+    wait         = bool
     })
 }
 

@@ -116,6 +116,7 @@ resource "helm_release" "coolsox" {
   repository  = var.helm.repository
   chart       = var.helm.chart
   version     = var.helm.version
+  wait        = var.helm.wait
 
   values = [<<EOF
 
