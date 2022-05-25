@@ -21,6 +21,7 @@ locals {
       enabled = false
       name    = "appd-db-agent"
       version = "21.9.0.2521" # latest?
+      properties = "-Ddbagent.telemetry.enabled=true"
       databases = {}
     }
   })
@@ -197,12 +198,9 @@ loadtest:
 # Controls the deployment of AppDynamics DB Agent
 appdynamics_db_agent:
     enabled: ${local.appd.db_agent.enabled}
-    controller_host: ${local.appd.account.host}
-    controller_port: ${local.appd.account.port}
-    account_name: ${local.appd.account.name}
-    account_access_key: ${local.appd.account.key}
     dbagent_name: ${local.appd.db_agent.name}
     dbagent_version: ${local.appd.db_agent.version}
+    dbagent_properties: ${local.appd.db_agent.properties}
     mongodb_user: ${try(local.appd.db_agent.databases["mongodb"].user, "")}
     mongodb_password: ${try(local.appd.db_agent.databases["mongodb"].password, "")}
 

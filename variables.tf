@@ -122,6 +122,7 @@ variable "appd" {
       enabled     = bool
       name        = optional(string)
       version     = optional(string)
+      properties  = optional(string)
       databases   = optional(map(object({
         name      = string
         user      = string
