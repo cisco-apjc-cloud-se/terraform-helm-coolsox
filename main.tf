@@ -20,7 +20,7 @@ locals {
     db_agent = {
       enabled = false
       name    = "appd-db-agent"
-      version = "21.9.0.2521" # latest?
+      version = "latest" #"21.9.0.2521" # latest?
       properties = "-Ddbagent.telemetry.enabled=true"
       databases = {}
     }
