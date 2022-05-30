@@ -175,6 +175,7 @@ orders:
     replicas: ${local.settings.orders.replicas}
 # Payment settings
 payment:
+    APPD_TIERNAME: ${local.settings.payment.appd_tiername}
     version: ${local.settings.payment.version}
     replicas: ${local.settings.payment.replicas}
 # Queue-master settings
@@ -188,6 +189,7 @@ user_db:
     version: ${local.settings.user_db.version}
 # User settings
 user:
+    APPD_TIERNAME: ${local.settings.user.appd_tiername}
     version: ${local.settings.user.version}
     replicas: ${local.settings.user.replicas}
 
